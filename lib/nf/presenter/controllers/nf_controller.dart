@@ -274,7 +274,7 @@ class NfController extends ChangeNotifier {
 
     final output = await getTemporaryDirectory();
     final file = await File(
-            '${output.path}/ficha-curi-autos-${Random().nextInt(2424242424)}.pdf')
+            '${output.path}/ficha-autos-${Random().nextInt(2424242424)}.pdf')
         .writeAsBytes(bytes);
 
     await shareDocumentUsecase.call(
