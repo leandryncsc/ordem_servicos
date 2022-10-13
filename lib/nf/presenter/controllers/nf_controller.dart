@@ -80,7 +80,7 @@ class NfController extends ChangeNotifier {
   Future<void> exportextPDF() async {
     final pdf = pw.Document();
 
-    final logo = pw.MemoryImage(await _readImageData('curi_autos.png'));
+    final logo = pw.MemoryImage(await _readImageData('logo.png'));
 
     final textSyle = pw.TextStyle(
       fontSize: 14,
