@@ -3,10 +3,9 @@ import 'package:ordem_servicos/core/services/share/share_service.dart';
 import 'package:ordem_servicos/nf/domain/usecases/share_document/share_nf_usecase.dart';
 import 'package:ordem_servicos/nf/extenal/datasource/share_nf_datasource.dart';
 import 'package:ordem_servicos/nf/infra/repositorys/share_nf_repository.dart';
+import 'package:ordem_servicos/nf/presenter/pages/nf_page.dart';
 import 'package:provider/provider.dart';
-
 import 'nf/presenter/controllers/nf_controller.dart';
-import 'nf/presenter/pages/nf_page.dart';
 
 void main() {
   runApp(const MyApp());
