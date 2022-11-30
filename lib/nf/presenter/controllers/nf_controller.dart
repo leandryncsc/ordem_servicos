@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:math';
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
@@ -80,7 +79,7 @@ class NfController extends ChangeNotifier {
   Future<void> exportextPDF() async {
     final pdf = pw.Document();
 
-    final logo = pw.MemoryImage(await _readImageData('curi_autos.png'));
+    final logo = pw.MemoryImage(await _readImageData('logo.png'));
 
     final textSyle = pw.TextStyle(
       fontSize: 14,
@@ -274,7 +273,7 @@ class NfController extends ChangeNotifier {
 
     final output = await getTemporaryDirectory();
     final file = await File(
-            '${output.path}/ficha-curi-autos-${Random().nextInt(2424242424)}.pdf')
+            '${output.path}/ficha-autos-${Random().nextInt(2424242424)}.pdf')
         .writeAsBytes(bytes);
 
     await shareDocumentUsecase.call(
